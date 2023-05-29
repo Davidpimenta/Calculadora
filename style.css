@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+
+
+
+:root{
+    --cor0:#0D0D0D;
+    --cor1:#D9674E;
+    --cor2:#F29057;
+    --cor3:#0F1226;
+    --cor4:#733843;
+}
+
+/*CABEÇALHO*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body, html{
+    min-height: 100%;
+}
+
+#box{
+    display: grid;
+    grid-template-rows: 22% 75%;
+    height: 100vh;
+    gap: 15px;
+}
+
+body{
+    position: relative;
+    background-color: var(--cor0);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: var(--cor0);
+    box-shadow: 0px 5px 2px #d9674e57;
+}
+
+.child_header{
+    width: 30%;
+}
+
+#calculadora_resultado{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--cor1);
+    border-radius: 10px;
+    font-size: 1.5em;
+    padding: 5px;
+    color: var(--cor3);
+    justify-content: right;
+    border: 3px solid var(--cor2);
+}
+
+#resultado_texto{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+
+#exibir-div{
+    display: none;
+}
+
+#exibir-button{
+    border-radius: 5px;
+    border: 2px solid var(--cor1);
+    background-color: var(--cor3);
+    color: var(--cor1);
+    padding: 5px;
+    cursor: pointer;
+}
+
+#exibir_historico{
+    border-radius: 5px;
+    border: 2px solid var(--cor1);
+    background-color: var(--cor3);
+    color: var(--cor1);
+    padding: 5px;
+    cursor: pointer;
+}
+
+#exibir_troca{
+    border-radius: 5px;
+    border: 2px solid var(--cor1);
+    background-color: var(--cor3);
+    color: var(--cor1);
+    padding: 5px;
+    cursor: pointer;
+}
+/*CABEÇALHO*/
+/*Principal*/
+
+main{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: 
+    'raiz pi potencia fatoracao'
+    'apagar_tudo parenteses porcentagem dividir'
+    'sete oito nove multiplicar'
+    'quatro cinco seis subtracao'
+    'um dois tres soma'
+    'zero virgula apagar resultado';
+    padding: 0px 15px;
+    padding-left: 24px;
+}
+
+.num{
+    width: 95%;
+    height: 95%;
+    background-color: var(--cor3);
+    border: 2px solid var(--cor2);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.num:hover{
+    background-color: var(--cor0);
+    transition-duration: 0.5s;
+    border-radius: 50px;
+}
+
+#raiz{
+    background-image: url("imagens/square-root-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: raiz;
+}
+
+
+#pi{
+    background-image: url("imagens/pi-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: pi;
+}
+
+#potencia{
+    background-image: url("imagens/caret-up-sm-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: potencia;
+}
+
+#fatoracao{
+    background-image: url("imagens/exclamation-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: fatoracao;
+}
+
+#apagar_tudo{
+    background-image: url("imagens/delete-1487-svgrepo-com.svg");
+    background-size: 90% 90%;
+    background-position: center center;
+    background-repeat: no-repeat;;
+    grid-area: apagar_tudo;
+}
+
+#parenteses{
+    background-image: url("imagens/parentheses-svgrepo-com.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    grid-area: parenteses;
+}
+
+#porcentagem{
+    background-image: url("imagens/percent_FILL0_wght400_GRAD0_opsz48.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: porcentagem;
+}
+
+#dividir{
+    background-image: url("imagens/division-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: dividir;
+}
+
+#sete{
+    background-image: url("imagens/seven-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: sete;
+}
+
+#oito{
+    background-image: url("imagens/eight-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: oito;
+}
+
+#nove{
+    background-image: url("imagens/nine-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: nove;
+}
+
+#multiplicar{
+    background-image: url("imagens/emergency_FILL0_wght400_GRAD0_opsz48.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: multiplicar;
+}
+
+#quatro{
+    background-image: url("imagens/four-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: quatro;
+}
+
+#cinco{
+    background-image: url("imagens/five-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: cinco;    
+}
+
+#seis{
+    background-image: url("imagens/six-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: seis;
+}
+
+#subtracao{
+    background-image: url("imagens/remove_FILL0_wght400_GRAD0_opsz48.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: subtracao;
+}
+
+#um{
+    background-image: url("imagens/one-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: um;
+}
+
+#dois{
+    background-image: url("imagens/two-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: dois;
+}
+
+#tres{
+    background-image: url("imagens/three-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: tres;
+}
+
+#soma{
+    background-image: url("imagens/add_FILL0_wght400_GRAD0_opsz48.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: soma;
+}
+
+#zero{
+    background-image: url("imagens/zero-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: zero;
+}
+
+#virgula{
+    background-image: url("imagens/comma-svgrepo-com.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: virgula;
+}
+
+#apagar{
+    background-image: url("imagens/backspace_FILL0_wght400_GRAD0_opsz48.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: apagar;
+}
+
+#resultado{
+    background-image: url("imagens/equal_FILL0_wght400_GRAD0_opsz48.svg");
+    background-position: center center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    grid-area: resultado;
+}
+
+
+/*Principal*/
